@@ -1,12 +1,9 @@
 ---
 # tasks file for roles/not
-
 - name: Set fact for localhost
   ansible.builtin.set_fact:
     the: "like"
 
-
 - name: Message to display the variable was initialized
   ansible.builtin.debug:
     msg: "variable from ansible role 'not' was initialized"
-

@@ -2,13 +2,11 @@
 - name: Run depenedencies example
   hosts: localhost
 
-
   tasks:
 
     - name: Include the primary role for example
       ansible.builtin.include_role:
         name: they
-
 
     - name: Print messeage when all roles have ran successfully
       ansible.builtin.debug:
@@ -27,7 +25,6 @@
         - dot is not defined
         - the is not defined 
         - goat is not defined
-
 
 
     
