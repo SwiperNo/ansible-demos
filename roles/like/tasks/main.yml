@@ -5,3 +5,8 @@
   ansible.builtin.set_fact:
     dot: "not"
 
+
+- name: Message to display the variable was initialized
+  ansible.builtin.debug:
+    msg: "variable from ansible role 'dot' was initialized"
+

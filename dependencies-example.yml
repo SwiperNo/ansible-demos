@@ -5,7 +5,6 @@
 
   tasks:
 
-
     - name: Include the primary role for example
       ansible.builtin.include_role:
         name: roles/they
@@ -14,5 +13,21 @@
     - name: Print messeage when all roles have ran successfully
       ansible.builtin.debug:
         msg: "{{ k }} {{ dot }} {{ the }} {{ goat }}"
+      when: 
+        - k is defined
+        - dot is defined
+        - the is defined 
+        - goat is defined
+
+    - name: Print messeage when some variables are missing.
+      ansible.builtin.debug:
+        msg: "Make sure all dependencies are set correctly"
+      when: 
+        - k is not defined
+        - dot is not defined
+        - the is not defined 
+        - goat is not defined
+
+
 
     

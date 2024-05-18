@@ -5,3 +5,9 @@
 - name: Set fact for localhost
   ansible.builtin.set_fact:
     goat: "us"
+
+
+- name: Message to display the variable was initialized
+  ansible.builtin.debug:
+    msg: "variable from ansible role 'us' was initialized"
+
