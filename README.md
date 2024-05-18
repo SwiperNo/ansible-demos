@@ -9,6 +9,7 @@ This project is a fun and silly way to simiulate ansible depdencies and it works
 ## Dependency location
 If you inspect the ansible role for "they" and check the meta directory, ansible dependencies are added here. Here is an example below:
 
+```yaml
 roles/they/
 ├── defaults
 │   └── main.yml
@@ -23,6 +24,7 @@ dependencies:
   - role: roles/not
   - role: roles/like
   - role: roles/us
+```
 
 ## Importance of dependencies in Ansible
 Depending on your project, there may be times where you need to include a role that sets set up the environment for your application. For example, maybe we need to install java jdk, and you have a role that already configure this, specifically for your enviornment. Instead of writing this again, we can include this as a dependency to run beforce configuring your application. A very simple use case, but the ability to do so is there. 
