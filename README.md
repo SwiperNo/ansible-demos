@@ -3,7 +3,16 @@
 
 ## Overview
 
-This project demonstrates how to use Ansible dependencies and GitHub Actions to automate the execution of an Ansible playbook. The playbook, `dependencies-example.yml`, includes multiple roles with dependencies, showcasing how Ansible handles role dependencies and variable definitions.
+This project is a fun and silly way to simiulate ansible depdencies and it works. We added a bit more to this by adding github actions to kick off the ansible playbook. The playbook, `dependencies-example.yml`, calls the ansible role "They". This is my attempt to add a little bit of comedy from recent track from Kedrick Lamar's "They not like us". When the playbook execute successfully, it will print this message. Clone and have fun!
 
-## Project Structure
 
+## Dependency location
+If you inspect the ansible role for "they" and check the meta directory, ansible dependencies are added here. Here is an example below:
+
+dependencies: 
+  - role: roles/not
+  - role: roles/like
+  - role: roles/us
+
+## Importance of dependencies in Ansible
+Depending on your project, there may be times where you need to include a role that sets set up the environment for your application. For example, maybe we need to install java jdk, and you have a role that already configure this, specifically for your enviornment. Instead of writing this again, we can include this as a dependency to run beforce configuring your application. A very simple use case, but the ability to do so is there. 
