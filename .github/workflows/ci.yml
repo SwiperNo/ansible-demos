@@ -13,4 +13,3 @@ jobs:
       uses: dawidd6/action-ansible-playbook@v2.8.0
       with:
         playbook: ansible-demos/dependencies-example.yml
-        requirements: ansible-demos/requirements.yml
