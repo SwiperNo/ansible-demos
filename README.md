@@ -9,6 +9,16 @@ This project is a fun and silly way to simiulate ansible depdencies and it works
 ## Dependency location
 If you inspect the ansible role for "they" and check the meta directory, ansible dependencies are added here. Here is an example below:
 
+roles/they/
+├── defaults
+│   └── main.yml
+├── files
+├── handlers
+│   └── main.yml
+├── meta
+│   └── main.yml
+
+
 dependencies: 
   - role: roles/not
   - role: roles/like
