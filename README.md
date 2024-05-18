@@ -1,7 +1,4 @@
 # They Not Like Us
-
-![They Not Like Us](./kdot.webp)
-
 <img src="./kdot.webp" alt="They Not Like Us" width="300" height="300">
 
 ## Overview
