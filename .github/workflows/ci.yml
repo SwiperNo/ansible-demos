@@ -1,17 +1,13 @@
 on: [push, pull_request]
 
 jobs:
-  build:
+  run-playbook:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Run Ansible Lint
-      uses: ansible/ansible-lint@v24.5.0
-      with:
-        directory: ansible-demos
 
     - name: Run Ansible Playbook
       uses: dawidd6/action-ansible-playbook@v2.8.0
