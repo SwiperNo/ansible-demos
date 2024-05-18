@@ -7,7 +7,7 @@
 
     - name: Include the primary role for example
       ansible.builtin.include_role:
-        name: roles/they
+        name: they
 
 
     - name: Print messeage when all roles have ran successfully
